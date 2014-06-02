@@ -3,3 +3,5 @@ bower_components
 dist
 .tmp
 test
+assets/coffee
+assets/less

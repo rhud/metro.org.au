@@ -1,21 +1,88 @@
-<?php get_template_part('templates/page', 'header'); ?>
+	 <div class="wrap" id="home" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="player">
+        		<video autoplay loop poster="polina.jpg" id="bgvid">
+        		<source src="/assets/vid/test.webm" type="video/webm">
+        		<source src="/assets/vid/test.mp4" type="video/mp4">
+        		</video>
+        	</div>
+        </div>
+        
+        <div id="hero" data-parallaxer="enabled" data-parallaxer-speed="3.0">
+        	<div class="container">
+        		<div class="hero-content">
+                	<h3 class="heromsg">Hang around METRO for a day</h3>
+                	<h3 class="heromsg">& you'll see or hear the words</h3>
+                	<h1><span class="heromsg">BIG.</span> <span class="heromsg">NOW.</span> <span class="heromsg">YES.</span> <span class="heromsg">GO.</span></h1>
+                	<p class="hr heromsg"></p>
+                	<span class="hero-border l1"></span>
+        			<span class="hero-border l2"></span>
+        			<span class="hero-border l3"></span>
+        			<span class="hero-border l4"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wrap" id="about" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn">
+        		<div class="container">
+        			<div class="banner-bg" data-parallaxer="enabled" data-parallaxer-speed="0.5"></div>
+        			<div class="col-md-6">
+        				<div class="banner"  data-parallaxer="enabled" data-parallaxer-speed="0.3"></div>
+        			</div>
+        			<div class="col-md-6 content">
+        				<p>METRO Church is a fresh, enjoyable, irreligious & ultra-relevant Christian Church, first launched on the Gold Coast and recently launched in Toowoomba and the Sunshine Coast.</p>
+        				
+        				<p>Since launching on the Gold Coast in 2006 and Toowoomba in 2012, METRO Church has seen thousands of lives authentically changed for the better through its dynamic yet very down to Earth expression of Christian faith, hope & love. In 2013 METRO Church recently launched on the Sunshine Coast and now enjoys church in all its contemporary flare & heartfelt Christian commitment as METRO serves this region.</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        
+        <div class="wrap" id="locations" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        		<div class="container">
+        			<h1 class="black">locations</h1>
+        		</div>
+        	</div>
+        	<h2 class="city gc">Gold Coast</h2>
+        	<h2 class="city tba">Toowoomba</h2>
+        	<h2 class="city sc">Sunshine Coast</h2>
+        </div>
+        
+        <div class="wrap" id="vtour" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+	        	<div class="container">
+	        		<div class="tourbox">
+	        			<h1 class="white">Virtual<br/>Tour</h1>
+	        			<a class="tourplay" href="#"><i class="icon-play"></i></a>
+	        		</div>
+	        	</div>
+	        </div>
+        </div>
+        
+        <div class="wrap" id="concierge" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        		<div class="container">
+        			<h1 class="black">concierge</h1>
+        		</div>
+        	</div>
+        </div>
+        
+        <div class="wrap" id="philanthropic" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        		<div class="container">
+        			<h1 class="black">philanthropic</h1>
+        		</div>
+        	</div>
+        </div>
+        
+        <div class="wrap" id="contact" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        		<div class="container">
+        			<h1 class="white">contact</h1>
+        		</div>
+        	</div>
+        </div>
+        
+       <div class="loader"><i class="page-center icon-spin animate-spin"></i></div>
 
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'roots'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
-
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_format()); ?>
-<?php endwhile; ?>
-
-<?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
-    <ul class="pager">
-      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
-      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
-    </ul>
-  </nav>
-<?php endif; ?>

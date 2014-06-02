@@ -1,10 +1,3 @@
-<footer class="content-info container" role="contentinfo">
-  <div class="row">
-    <div class="col-lg-12">
-      <?php dynamic_sidebar('sidebar-footer'); ?>
-      <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-    </div>
-  </div>
-</footer>
-
+<script src="/wp-content/themes/metro.org.au/bower_components/raf.js/raf.js"></script>
+<script src="/wp-content/themes/metro.org.au/bower_components/parallaxer.js/dist/parallaxer.min.js"></script>
 <?php wp_footer(); ?>

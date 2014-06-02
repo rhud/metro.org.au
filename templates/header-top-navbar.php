@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<!--<header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,4 +18,20 @@
       ?>
     </nav>
   </div>
+</header>-->
+
+<header>
+	<div class="container">
+		<a class="metrologo pull-left" href="#home"><i class="icon-metro"></i></a>
+		<nav class="pull-right">
+			<ul>
+			    <li><a href="#about">About</a></li>
+			    <li><a href="#locations">Locations</a></li>
+			    <li><a href="#vtour">Virtual Tour</a></li>
+			    <li><a href="#concierge">Concierge</a></li>
+			    <li><a href="#philanthropic">Philanthropic</a></li>
+			    <li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>

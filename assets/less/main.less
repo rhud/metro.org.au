@@ -1,82 +1,333 @@
-/*!
- * Roots 6.5.1
- */
-
 @import "bootstrap.less";
 
-/*  ==========================================================================
-    Base
-    ========================================================================== */
+body {
+	&.loading {
+	    overflow: hidden;   
+	    .loader {
+	        display: block;
+	    }
+	}
+}
 
-body { }
+.loader {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: white;
+	text-align: center;
+	display: none;
+	.page-center {
+		top: 50% !important;
+	}
+	.icon-spin {
+		font-size: 30px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		color: @red;
+		font-style: normal;
+		padding: 0px;
+		margin: -15px 0 0 0;
+		position: absolute;
+		&::before {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+}
 
+.wrap {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	visibility: hidden;
+}	
 
+.inner {
+	width: 100%;
+}
 
-/*  ==========================================================================
-    Header
-    ========================================================================== */
+.content {
+	padding: 100px 0px;
+}
+	
+.player {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: black;
+	video {
+		.opacity(0.5);
+		right: 0; bottom: 0;
+		min-width: 100%; 
+		min-height:	100%;
+		width: auto; 
+		height: auto; 
+		z-index: -100;
+		background: url(../img/video.placeholder.jpg) no-repeat;
+		background-size: cover;
+	}
+}
 
-.banner { }
+#home {
+	height: 100%;
+	top: 0px;	
+	overflow: hidden;
+	padding: 0px;
+}
 
+#hero {
+	position: absolute;
+	top: 25% !important;
+	height: 260px;
+	width: 100%;
+	margin: -130px 0 0;
+	padding: 0px;
+	.opacity(0.9);
+	.hero-content {
+		height: 260px;
+		width: 710px;
+		padding: 25px;
+		position: absolute;
+	}
+	h3 {
+		color: white;
+		padding: 0;
+		margin: 0;
+		font-size: 300%;
+	}
+	h1 {
+		color: white;
+		text-align: left;
+		padding: 0px;
+		margin: 0px;
+		line-height: 1;
+		font-size: 700%;
+		span {
+			display: block;
+			float: left;
+			padding-right: 10px;
+		}
+	}
+	p.hr {
+		width: 50px;
+		background: white;
+		border: none;
+		height: 5px;
+		text-align: left;
+		margin: 0px;
+		display: block;
+		clear: both;
+	}
+	.heromsg {
+		.opacity(0.0);
+		margin-top: -10px;
+	}
+}
 
+#about {
+	height: auto;
+	background: @gray-lightest;
+	display: block;
+	overflow: hidden;
+	.banner {
+		width: 400px;
+		height: 400px;
+		background: url(../img/about.png) no-repeat;
+		background-size: 400px 400px;
+		display: block;
+	}
+	.banner-bg {
+		position: absolute;
+		width: 1200px;
+		height: 1200px;
+		background: url(../img/about-bg.png) no-repeat;
+		background-size: 1200px 1200px;
+		display: block;
+		margin-top: -400px;
+		margin-left: -50px;
+		.opacity(0.5);
+	}
+	
+}
 
-/*  ==========================================================================
-    Content
-    ========================================================================== */
+#locations {
+	background: url(../img/map.png) no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	
+	h1 {
+		margin: 0px;
+		line-height: 0.9;
+		font-size: 600%;
+		margin-top: 100px;
+	}
+	h2.city {
+		position: absolute;
+		font-size: 250%;
+		color: black;
+		left: 50%;
+		top: 50%;
+		&.tba {
+			margin-top: -12px;
+			margin-left: -55px;
+		}
+		&.gc {
+			margin-top: 28px;
+			margin-left: 55px;
+		}
+		&.sc {
+			margin-top: -102px;
+			margin-left: 40px;
+		}
+	}
+}
 
-.content { }
+#vtour {
+	background: red;
+	overflow: visible;
+	background: url(../img/virtual.tour.bg.jpg) center center;
+	background-size: cover;
+	display: block;
+	.tourbox {
+		height: 200px;
+		width: 450px;
+		border: 10px solid white;
+		padding: 20px 20px 10px 20px;
+		margin: 150px auto;
+		h1 {
+			margin: 0px;
+			line-height: 0.9;
+			font-size: 600%;
+			float: left;
+			width: 230px;
+			display: block;
+			border-right: 1px solid white;
+		}
+		a.tourplay {
+			position: relative;
+			float: right;
+			height: 100px;
+			width: 100px;
+			display: block;
+			right: 20px;
+			top: 20px;
+			i.icon-play:before {
+				font-size: 100px;
+				color: white;
+				margin: 5px 0px 0px;
+				.transition(0.5s ease-in-out);
+			}
+			&:hover {
+				i.icon-play:before {
+					.scale(1.1);
+					.transition(0.5s ease-in-out);
+				}
+			}
+		}
+	}
+}
 
+#concierge {
+	height: 500px;
+	background: @gray-lightest;
+	display: block;
+}	
 
+#philanthropic {
+	//background: black;
+}
 
-/*  ==========================================================================
-    Primary Content
-    ========================================================================== */
-
-.main { }
-
-/* Gallery Shortcode */
-.gallery-row { padding: 15px 0; }
-
-
-
-/*  ==========================================================================
-    Sidebar
-    ========================================================================== */
-
-.sidebar { }
-
-
-
-/*  ==========================================================================
-    Posts
-    ========================================================================== */
-
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-
-
-/*  ==========================================================================
-    Footer
-    ========================================================================== */
-
-.content-info { }
-
-
-
-/*  ==========================================================================
-    WordPress Generated Classes
-    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-    ========================================================================== */
+#contact {
+	background: black;
+}
+	
+/* Custom page header */
+header {
+	position: fixed;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	background: none;
+	.opacity(0.9);
+	visibility: hidden;
+	.transition(0.5s ease-in-out);
+	margin-top: -20px;
+	
+	a i.icon-metro:before {
+		font-size: 100px;
+		color: white;
+		margin: 20px 0px;
+		.transition(0.5s ease-in-out);
+	}
+	
+	nav {
+		margin: 50px 0px;
+		.transition(0.5s ease-in-out);
+		ul {
+			list-style: none;
+			li {
+				.transition(0.25s ease-in-out);
+				font-family: @font-body;
+				font-weight: 100;
+				text-transform: uppercase;
+				float: left;
+				padding: 0px;
+				margin: 0px 20px;
+				border-bottom: 1px solid transparent;
+				a {
+					.transition(0.5s ease-in-out);
+					color: @gray-lighter;
+					padding: 5px 0px;
+					&:hover {
+						color: white;
+						text-decoration: none;
+					}
+				}
+				&:hover {
+					border-bottom: 1px solid @red;
+				}
+				&.active {
+					.transition(0.5s ease-in-out);
+					border-bottom: 1px solid @gray-light;
+				}
+			}
+		}
+	}
+	&.alt {
+		background: white;
+		a i.icon-metro {
+			&:before {
+				.scale(0.6);
+				color: white;
+				margin: -10px 0px;
+				color: black;
+			}
+		}
+		nav {
+			margin: 30px 0px;
+			ul li a {
+				color: @gray;
+				&:hover {
+					color: black;
+				}
+			}
+			
+		}
+	}
+}
 
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
-
 
 
 /*  ==========================================================================

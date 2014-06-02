@@ -5,8 +5,8 @@
     "bootstrap": "~3.0.3",
     "modernizr": "~2.6.2",
     "roots": "git://github.com/roots/roots.git",
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "parallaxer.js": "~0.1.42"
   },
   "devDependencies": {}
 }
-
