@@ -1,4 +1,3 @@
-metro.org.au
-============
+# metro
 
-METRO Development Website
+TODO : First aid kit instructions after installation
