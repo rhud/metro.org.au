@@ -9,10 +9,10 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
     // Project settings
-    //yeoman: {
-      // Where to build the final theme
-    //  dist: '../metro'
-    //},
+    yeoman: {
+      //Where to build the final theme
+      dist: 'assets'
+    },
 
     // JAVASCRIPT
 
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/assets/css/main.css': [
+          '<%= yeoman.dist %>/css/main.css': [
             'assets/css/main.css'
           ]
         }
@@ -223,7 +223,8 @@ module.exports = function (grunt) {
 
   // Building the dist version
   grunt.registerTask('dist', [
-    'test'
+    'test',
+    'cssmin'
   ]);
 
   // Aliases
