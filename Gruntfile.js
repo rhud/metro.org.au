@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -49,10 +48,7 @@ module.exports = function (grunt) {
             //'bower_components/bootstrap/js/affix.js',
 
             // Your js code to be uglified. Order matters.
-            //'assets/js/h5bpshim.js',
-            //'assets/js/plugins/jquery-plugin.js',
-            //'bower_components/raf.js/raf.js',
-            //'bower_components/parallaxer.js/dist/parallaxer.min.js',
+            'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]
         }
@@ -174,15 +170,15 @@ module.exports = function (grunt) {
     },
 
     // Empties folders to start fresh
-    clean: {
-      options: {
-        // force is needed in case of deleting files outside the root directory
-        force: true
-      },
-      dist: [
-        '<%= yeoman.dist %>'
-      ]
-    },
+    //clean: {
+    //  options: {
+    //    // force is needed in case of deleting files outside the root directory
+    //    force: true
+    //  },
+    //  dist: [
+    //    '<%= yeoman.dist %>'
+    //  ]
+    //},
 
   });
 
@@ -201,8 +197,7 @@ module.exports = function (grunt) {
 
   // Unit-testing the app
   grunt.registerTask('test', [
-    'app',
-    'connect:test'
+    'app'
   ]);
 
 
@@ -215,7 +210,6 @@ module.exports = function (grunt) {
   // Watch task
   grunt.registerTask('serve', [
     'app',
-    'connect:test',
     'watch'
   ]);
 
@@ -229,11 +223,7 @@ module.exports = function (grunt) {
 
   // Building the dist version
   grunt.registerTask('dist', [
-    'test',
-    'clean:dist',
-    'copy:dist',
-    'cssmin',
-    'modernizr'
+    'test'
   ]);
 
   // Aliases
