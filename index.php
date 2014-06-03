@@ -1,8 +1,7 @@
-	 <div class="wrap" id="home" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+	 	<div class="wrap" id="home" data-parallaxer="enabled" data-parallaxer-speed="1.0">
         	<div class="player">
         		<video autoplay loop poster="polina.jpg" id="bgvid">
-        		<source src="/assets/vid/test.webm" type="video/webm">
-        		<source src="/assets/vid/test.mp4" type="video/mp4">
+        		<source src="http://player.vimeo.com/external/97219178.sd.mp4?s=14a735b073b51aca0ba109dab356910c" type="video/mp4">
         		</video>
         	</div>
         </div>

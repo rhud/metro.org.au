@@ -23,7 +23,8 @@ module.exports = function (grunt) {
       },
       app: [
         'Gruntfile.js',
-        'assets/js/*.js',
+        'assets/js/_*.js',
+        '!assets/js/modernizr.js',
         '!assets/js/scripts.min.js'
       ]
     },
@@ -224,7 +225,7 @@ module.exports = function (grunt) {
   // Building the dist version
   grunt.registerTask('dist', [
     'test',
-    'cssmin'
+    'cssmin'	
   ]);
 
   // Aliases

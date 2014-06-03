@@ -50,6 +50,12 @@ $('document').ready(function () {
 	    //$('body, html').animate({scrollTop:1});
 	});
 	
+//	$(function() {
+//	    var BV = new $.BigVideo();
+//	    BV.init();
+//	    BV.show('http://player.vimeo.com/external/97219178.hd.mp4?s=d3b99854b90e9e0be9e0373c5c25660d',{ambient:true});
+//	});
+	
     $(window).on('scroll', function() {
 		// Hide HERO
         if($(this).scrollTop() >= 150) {

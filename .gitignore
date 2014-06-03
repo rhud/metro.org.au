@@ -4,4 +4,4 @@ dist
 .tmp
 test
 assets/coffee
-assets/less
+assets/ignore

@@ -1,4 +1,4 @@
-# METRO.ORG.AU Wordpress Tempalte
+# METRO.ORG.AU Wordpress Template
 
 ## TODO 
 + Add down arrow on home section
