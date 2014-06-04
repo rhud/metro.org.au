@@ -1,12 +1,13 @@
-	 	<div class="wrap" id="home" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+	 	<div class="wrap" id="home">
         	<div class="player">
         		<video autoplay loop poster="polina.jpg" id="bgvid">
-        		<source src="http://player.vimeo.com/external/97219178.sd.mp4?s=14a735b073b51aca0ba109dab356910c" type="video/mp4">
+        		<!--<source src="http://player.vimeo.com/external/97219178.sd.mp4?s=14a735b073b51aca0ba109dab356910c" type="video/mp4">-->
+        		<source src="http://player.vimeo.com/external/97219178.hd.mp4?s=d3b99854b90e9e0be9e0373c5c25660d" type="video/mp4">
         		</video>
         	</div>
         </div>
         
-        <div id="hero" data-parallaxer="enabled" data-parallaxer-speed="3.0">
+        <div id="hero" class="parallax" data-parallaxer="enabled" data-parallaxer-speed="3.0">
         	<div class="container">
         		<div class="hero-content">
                 	<h3 class="heromsg">Hang around METRO for a day</h3>
@@ -21,12 +22,12 @@
             </div>
         </div>
         
-        <div class="wrap" id="about" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        <div class="wrap parallax" id="about" data-parallaxer="enabled" data-parallaxer-speed="1.0">
         	<div class="inner fadeIn">
         		<div class="container">
         			<div class="banner-bg" data-parallaxer="enabled" data-parallaxer-speed="0.5"></div>
         			<div class="col-md-6">
-        				<div class="banner"  data-parallaxer="enabled" data-parallaxer-speed="0.3"></div>
+        				<div class="banner parallax"  data-parallaxer="enabled" data-parallaxer-speed="0.3"></div>
         			</div>
         			<div class="col-md-6 content">
         				<p>METRO Church is a fresh, enjoyable, irreligious & ultra-relevant Christian Church, first launched on the Gold Coast and recently launched in Toowoomba and the Sunshine Coast.</p>
@@ -37,7 +38,7 @@
         	</div>
         </div>
         
-        <div class="wrap" id="locations" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        <div class="wrap parallax" id="locations" data-parallaxer="enabled" data-parallaxer-speed="1.0">
         	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
         		<div class="container">
         			<h1 class="black">locations</h1>
@@ -48,8 +49,8 @@
         	<h2 class="city sc">Sunshine Coast</h2>
         </div>
         
-        <div class="wrap" id="vtour" data-parallaxer="enabled" data-parallaxer-speed="1.0">
-        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        <div class="wrap parallax" id="vtour" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn parallax" data-parallaxer="enabled" data-parallaxer-speed="0.3">
 	        	<div class="container">
 	        		<div class="tourbox">
 	        			<h1 class="white">Virtual<br/>Tour</h1>
@@ -59,24 +60,24 @@
 	        </div>
         </div>
         
-        <div class="wrap" id="concierge" data-parallaxer="enabled" data-parallaxer-speed="1.0">
-        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        <div class="wrap parallax" id="concierge" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn parallax" data-parallaxer="enabled" data-parallaxer-speed="0.3">
         		<div class="container">
         			<h1 class="black">concierge</h1>
         		</div>
         	</div>
         </div>
         
-        <div class="wrap" id="philanthropic" data-parallaxer="enabled" data-parallaxer-speed="1.0">
-        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        <div class="wrap parallax" id="philanthropic" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn parallax" data-parallaxer="enabled" data-parallaxer-speed="0.3">
         		<div class="container">
         			<h1 class="black">philanthropic</h1>
         		</div>
         	</div>
         </div>
         
-        <div class="wrap" id="contact" data-parallaxer="enabled" data-parallaxer-speed="1.0">
-        	<div class="inner fadeIn" data-parallaxer="enabled" data-parallaxer-speed="0.3">
+        <div class="wrap parallax" id="contact" data-parallaxer="enabled" data-parallaxer-speed="1.0">
+        	<div class="inner fadeIn parallax" data-parallaxer="enabled" data-parallaxer-speed="0.3">
         		<div class="container">
         			<h1 class="white">contact</h1>
         		</div>
