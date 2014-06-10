@@ -66,6 +66,7 @@ $(window).load(function(){
 	setTimeout(showHero, 2000);
 });
 
+
 $('document').ready(function () {
 
 	$('#home').height($(window).height());
@@ -136,5 +137,5 @@ $('document').ready(function () {
 		andrzejdus.parallaxer.Parallaxer.setSmoothScrollEnabled(true);
 	    andrzejdus.parallaxer.Parallaxer.start();
 	}
-	console.log(BrowserDetect.browser);
+	//console.log(BrowserDetect.browser);
 });
