@@ -1,10 +1,11 @@
 	 	<div class="wrap" id="home">
         	<div class="player">
         		<video autoplay loop poster="polina.jpg" id="bgvid">
-        		<!--<source src="http://player.vimeo.com/external/97219178.sd.mp4?s=14a735b073b51aca0ba109dab356910c" type="video/mp4">-->
-        		<source src="http://player.vimeo.com/external/97219178.hd.mp4?s=d3b99854b90e9e0be9e0373c5c25660d" type="video/mp4">
+        		<source src="http://player.vimeo.com/external/97219178.sd.mp4?s=14a735b073b51aca0ba109dab356910c" type="video/mp4">
+        		<!--<source src="http://player.vimeo.com/external/97219178.hd.mp4?s=d3b99854b90e9e0be9e0373c5c25660d" type="video/mp4">-->
         		</video>
         	</div>
+        	<div id="movedown" data-parallaxer="enabled" data-parallaxer-speed="1.0"><a href="#about"><i class="icon-arrow-down"></i></a></div>
         </div>
         
         <div id="hero" class="parallax" data-parallaxer="enabled" data-parallaxer-speed="3.0">

@@ -48,7 +48,7 @@ body {
 }	
 
 .parallax {
-	position: absolute !important;
+	//position: absolute !important;
 }
 
 .inner {
@@ -65,6 +65,7 @@ body {
 	top: 0px;
 	left: 0px;
 	background: black;
+	position: fixed;
 	video {
 		.opacity(0.5);
 		right: 0; bottom: 0;
@@ -83,6 +84,39 @@ body {
 	top: 0px;	
 	overflow: hidden;
 	padding: 0px;
+	
+	#movedown {
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		text-align: center;
+		a {
+			text-align: center;
+			width: 100%;
+			i {
+				font-size: 36px;
+				padding-top: 4px;
+				color: white;
+				background: transparent;
+				border-radius: 25px;
+				font-weight: normal;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				margin: 0;
+				overflow: hidden;
+				text-align: center;
+				.transition(0.25s ease-in-out);
+			}
+			&:hover i {
+				background: white;
+				color: black;
+				
+			}
+		}
+	}
 }
 
 #hero {
@@ -161,7 +195,7 @@ body {
 }
 
 #locations {
-	background: url(../img/map.png) no-repeat;
+	background: white url(../img/map.png) no-repeat;
 	background-position-y: center;
 	background-position-x: center;
 	
@@ -244,7 +278,7 @@ body {
 }	
 
 #philanthropic {
-	//background: black;
+	background: white;
 }
 
 #contact {

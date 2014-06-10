@@ -1,6 +1,40 @@
-//console.log('');
-
 var andrzejdus;
+
+var BrowserDetect = 
+{
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || 'Other';
+		this.version = this.searchVersion(navigator.userAgent) ||       this.searchVersion(navigator.appVersion) || 'Unknown';
+	},
+
+	searchString: function (data) 
+	{
+		for (var i=0 ; i < data.length ; i++) {
+			var dataString = data[i].string;
+			this.versionSearchString = data[i].subString;
+			if (dataString.indexOf(data[i].subString) !== -1) {
+				return data[i].identity;
+			}
+		}
+	},
+
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index === -1) { return; }
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+
+	dataBrowser: 
+	[
+		{ string: navigator.userAgent, subString: 'Chrome',  identity: 'Chrome' },
+		{ string: navigator.userAgent, subString: 'MSIE',    identity: 'Explorer' },
+		{ string: navigator.userAgent, subString: 'Firefox', identity: 'Firefox' },
+		{ string: navigator.userAgent, subString: 'Safari',  identity: 'Safari' },
+		{ string: navigator.userAgent, subString: 'Opera',   identity: 'Opera' }
+	]
+};
+
+BrowserDetect.init();
 
 function showHero() {
 	var msg = $('.heromsg');
@@ -50,13 +84,7 @@ $('document').ready(function () {
 	    //$('body, html').animate({scrollTop:1});
 	});
 	
-//	$(function() {
-//	    var BV = new $.BigVideo();
-//	    BV.init();
-//	    BV.show('http://player.vimeo.com/external/97219178.hd.mp4?s=d3b99854b90e9e0be9e0373c5c25660d',{ambient:true});
-//	});
-	
-    $(window).on('scroll', function() {
+	$(window).on('scroll', function() {
 		// Hide HERO
         if($(this).scrollTop() >= 150) {
 			$('#hero').fadeOut(500);
@@ -103,6 +131,10 @@ $('document').ready(function () {
 		});
     });
 	
-	andrzejdus.parallaxer.Parallaxer.setSmoothScrollEnabled(true);
-    andrzejdus.parallaxer.Parallaxer.start();
+	
+	if (BrowserDetect.browser !== 'Explorer' && BrowserDetect.browser !== 'Other') {
+		andrzejdus.parallaxer.Parallaxer.setSmoothScrollEnabled(true);
+	    andrzejdus.parallaxer.Parallaxer.start();
+	}
+	console.log(BrowserDetect.browser);
 });

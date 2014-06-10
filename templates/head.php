@@ -11,7 +11,6 @@
         <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
         
         <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="stylesheet" href="/assets/css/main.css">
         <!--[if IE 7]><link rel="stylesheet" href="/assets/css/fontello-ie7.css"><![endif]-->
         <!-- endbuild -->
     </head>
