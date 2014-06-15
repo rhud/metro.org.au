@@ -27,7 +27,6 @@
 			<ul>
 			    <li><a href="#about">About</a></li>
 			    <li><a href="#locations">Locations</a></li>
-			    <li><a href="#vtour">Virtual Tour</a></li>
 			    <li><a href="#concierge">Concierge</a></li>
 			    <li><a href="#philanthropic">Philanthropic</a></li>
 			    <li><a href="#contact">Contact</a></li>

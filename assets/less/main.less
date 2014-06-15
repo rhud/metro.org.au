@@ -46,18 +46,35 @@ body {
 	height: 500px;
 	position: relative;
 	visibility: hidden;
+	background: white;
+	//border-top: 25px solid white;
+	
 }	
 
 .parallax {
 	//position: absolute !important;
 }
 
+.box {
+	padding: 40px !important;
+	margin: 200px 0px !important;
+	&.white {
+		background: white;
+		color: black;
+		border-left: 1px solid @red;
+	}
+}
+
 .inner {
 	width: 100%;
 }
 
+.container {
+	clear: all;
+}
+
 .content {
-	padding: 100px 0px;
+	padding: 200px 0px;
 }
 	
 .player {
@@ -93,28 +110,35 @@ body {
 		bottom: 0px;
 		left: 0px;
 		text-align: center;
+		z-index: 2;
 		a {
 			text-align: center;
-			width: 100%;
+			width: 80px;
+			height: 80px;
+			display: inline-block;
+			.transition(0.25s ease-in-out);
 			i {
-				font-size: 36px;
-				padding-top: 4px;
+				font-size: 50px;
+				padding-top: 10px;
 				color: white;
 				background: transparent;
-				border-radius: 25px;
+				border-radius: 40px;
 				font-weight: normal;
 				position: absolute;
-				width: 50px;
-				height: 50px;
-				margin: 0;
+				width: 80px;
+				height: 80px;
+				margin: 0 0 0 -40px;
 				overflow: hidden;
 				text-align: center;
 				.transition(0.25s ease-in-out);
 			}
-			&:hover i {
-				background: white;
-				color: black;
-				
+			&:hover {
+				padding-top: 10px;
+				i {
+					background: white;
+					color: black;
+					
+				}
 			}
 		}
 	}
@@ -127,6 +151,7 @@ body {
 	width: 100%;
 	margin: -130px 0 0;
 	padding: 0px;
+	z-index: 1;
 	.opacity(0.9);
 	.hero-content {
 		height: 260px;
@@ -171,7 +196,8 @@ body {
 
 #about {
 	height: auto;
-	background: @gray-lightest;
+	background: url(../img/southport.jpg) center center;
+	background-size: cover;
 	display: block;
 	overflow: hidden;
 	.banner {
@@ -183,19 +209,113 @@ body {
 	}
 	.banner-bg {
 		position: absolute;
-		width: 1200px;
-		height: 1200px;
+		width: 600px;
+		height: 600px;
 		background: url(../img/about-bg.png) no-repeat;
-		background-size: 1200px 1200px;
+		background-size: 600px 600px;
 		display: block;
-		margin-top: -400px;
-		margin-left: -50px;
-		.opacity(0.5);
+		margin-top: 0px;
+		margin-left: -100px;
+		//.opacity(0.75);
 	}
+	
 	
 }
 
 #locations {
+	height: auto;
+	background: white;
+	
+	ul {
+		width: 100%;
+		height: auto;
+		padding: 0px;
+		margin: 50px 0px;
+		list-style: none;
+		
+		li {
+			display: inline-block;
+			float: left;
+			position: relative;
+			padding: 0px;
+			margin: 0px;
+			width: 25%;
+			height: auto;
+			max-height: 500px;
+			a {
+				overflow: hidden;
+				height: auto;
+				background: white;
+				display: block;
+				cursor: pointer;
+				
+				img {
+					width: 100%;
+					height: auto;
+					max-height: 100%;
+					display: block;
+					border-left: 1px solid white;
+				}
+				.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					top: 0px;
+					left: 1px;
+					.transition(0.25s ease-in-out);
+					&:before {
+						display: inline-block;
+						height: 100%;
+						vertical-align: middle;
+						content: "";
+					}
+					h3 {
+						border: 5px solid white;
+						padding: 5px 20px;
+						top: 100px;
+						color: white;
+						font-size: 40px;
+						display: inline;
+					}
+				}
+			}
+			&:hover {
+				.overlay {
+					background: rgba(0, 0, 0, 0.5); 
+				}
+			}
+		}
+	}
+	
+	h1 {
+		margin: 0px;
+		line-height: 0.9;
+		font-size: 600%;
+		margin-top: 100px;
+	}
+	h2.city {
+		position: absolute;
+		font-size: 250%;
+		color: black;
+		left: 50%;
+		top: 50%;
+		&.tba {
+			margin-top: -12px;
+			margin-left: -55px;
+		}
+		&.gc {
+			margin-top: 28px;
+			margin-left: 55px;
+		}
+		&.sc {
+			margin-top: -102px;
+			margin-left: 40px;
+		}
+	}
+}
+
+/*#locations {
 	background: white url(../img/map.png) no-repeat;
 	background-position-y: center;
 	background-position-x: center;
@@ -225,7 +345,7 @@ body {
 			margin-left: 40px;
 		}
 	}
-}
+}*/
 
 #vtour {
 	background: red;
